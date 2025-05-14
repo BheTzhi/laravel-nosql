@@ -67,11 +67,7 @@ class Test extends Eloquent
     protected $connection = 'mongodb';
     protected $collection = 'tests';
 }
-
-
-Absolutely! Here's the English version of the README.md content, formatted with Markdown for better readability:
-
-Markdown
+```
 
 # Laravel NoSQL - Simple CRUD with MongoDB
 
@@ -141,7 +137,8 @@ class Test extends Eloquent
 {
     protected $connection = 'mongodb';
     protected $collection = 'tests';
-}```
+}
+```
 
 ## Install the MongoDB package:
 
