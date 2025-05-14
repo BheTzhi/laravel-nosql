@@ -145,7 +145,8 @@ class Test extends Eloquent
 
 ```Bash
 
-composer require jenssegers/mongodb```
+composer require jenssegers/mongodb
+```
 
 ## 👤 Author
 
