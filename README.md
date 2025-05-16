@@ -156,4 +156,3 @@ BheTzhi
 This project is built as a learning tool and to demonstrate Laravel integration with MongoDB.
 
 May it be useful and bring barakah.
-

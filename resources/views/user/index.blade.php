@@ -52,7 +52,8 @@
 
                         <td>{{ $u->password }}</td>
                         <td>
-                            <a href="#" class="btn btn-sm btn-outline-info"><i class="fa fa-eye"></i></a>
+                            <a href="{{ route('user.show', ['user' => $u->username]) }}"
+                                class="btn btn-sm btn-outline-info"><i class="fa fa-eye"></i></a>
                             <a href="{{ route('user.edit', ['user' => $u->_id]) }}"
                                 class="btn btn-sm btn-outline-warning"><i class="fa fa-edit"></i></a>
                             <form action="{{ route('user.destroy', ['user' => $u->_id]) }}" method="post">

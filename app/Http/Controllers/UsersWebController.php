@@ -10,6 +10,7 @@ class UsersWebController extends Controller
     public function index()
     {
         $user = Test::all();
+        $user->makeHidden(['password']);
 
         return view('user.index', compact('user'));
     }
@@ -38,7 +39,9 @@ class UsersWebController extends Controller
 
     public function show($id)
     {
-        //
+        $user = Test::where('username', $id)->first();
+
+        return view('user.show', compact('user'));
     }
 
     public function edit($id)
