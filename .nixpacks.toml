@@ -1,9 +1,15 @@
 [phases.setup]
 runtime = "php"
-version = "8.2"
+version = "8.3"
 
-[phases.setup.extensions]
-mongodb = true
+[packages]
+apt = ["php8.3-mongodb"]
 
-[phases.setup.scripts]
-postinstall = "composer install --no-dev --optimize-autoloader"
+[phases.install]
+cmds = ["composer install --no-dev --optimize-autoloader"]
+
+[phases.build]
+cmds = ["php artisan config:cache"]
+
+[start]
+cmd = "php artisan serve --host=0.0.0.0 --port=$PORT"
