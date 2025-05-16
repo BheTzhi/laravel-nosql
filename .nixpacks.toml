@@ -6,10 +6,16 @@ version = "8.3"
 apt = ["php8.3-mongodb"]
 
 [phases.install]
-cmds = ["composer install --no-dev --optimize-autoloader"]
+cmds = [
+  "composer install --no-dev --optimize-autoloader",
+  "php -m"
+]
 
 [phases.build]
-cmds = ["php artisan config:cache"]
+cmds = [
+  "php artisan config:cache",
+  "php -m | grep mongodb || echo 'mongodb extension NOT found!'"
+]
 
 [start]
 cmd = "php artisan serve --host=0.0.0.0 --port=$PORT"
