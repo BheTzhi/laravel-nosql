@@ -1,3 +1,9 @@
 [phases.setup]
 runtime = "php"
 version = "8.2"
+
+[phases.setup.extensions]
+mongodb = true
+
+[phases.setup.scripts]
+postinstall = "composer install --no-dev --optimize-autoloader"
