@@ -13,8 +13,7 @@ cmds = [
 
 [phases.build]
 cmds = [
-  "php artisan config:cache",
-  "php -m | grep mongodb || echo 'mongodb extension NOT found!'"
+  "php artisan config:cache"
 ]
 
 [start]
