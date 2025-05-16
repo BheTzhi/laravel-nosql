@@ -3,12 +3,11 @@ runtime = "php"
 version = "8.3"
 
 [packages]
-apt = ["php8.3-mongodb"]
-
+apt = ["php8.3-mongodb", "libssl-dev", "pkg-config"]  
 [phases.install]
 cmds = [
   "composer install --no-dev --optimize-autoloader",
-  "php -m"
+  "php -m"  
 ]
 
 [phases.build]
