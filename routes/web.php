@@ -20,3 +20,7 @@ Route::get('/', function () {
 });
 
 Route::resource('user', UsersWebController::class);
+
+Route::get('/phpinfo', function () {
+    phpinfo();
+});
