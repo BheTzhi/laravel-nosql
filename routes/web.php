@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return route('user');
+    return redirect()->route('user.index');
 });
 
 Route::resource('user', UsersWebController::class);
