@@ -10,7 +10,7 @@ class Test extends Model
     use HasFactory;
 
     protected $connection = 'mongodb';
-    protected $collection = 'test';
+    protected $collection = 'users';
 
     protected $fillable = ['username', 'password', 'details'];
 
